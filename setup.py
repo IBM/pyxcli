@@ -24,7 +24,7 @@ except ImportError:
 setup(
     name='pyxcli',
     version=pyxcli.version,
-    description="IBM Storage Clients",
+    description="IBM Python XCLI Client",
     author="Tzur Eliyahu, Alon Marx",
     author_email="tzure@il.ibm.com",
     maintainer="Tzur Eliyahu, Alon Marx",
