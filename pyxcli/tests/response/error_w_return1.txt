@@ -1,0 +1,28 @@
+<command id="0">
+<administrator>
+    <command>
+        <code value="PARTIAL_SUCCESS"/>
+        <status value="0"/>
+        <status_str value="Command completed with partial success"/>
+        <return>
+            <num_results value="3"/>
+            <results id="0">
+                <return_value value="TRNS_STATUS_GOOD"/>
+                <slu_lun value="0000D200001B0000"/>
+                <vol_name value="vol1"/>
+            </results>
+            <results id="1">
+                <return_value value="TRNS_MGMT_STATUS_VOLUME_BAD_NAME"/>
+                <slu_lun value="0000000000000000"/>
+                <vol_name value=""/>
+            </results>
+            <results id="2">
+                <return_value value="TRNS_MGMT_STATUS_VOLUME_BAD_NAME"/>
+                <slu_lun value="0000000000000000"/>
+                <vol_name value=""/>
+            </results>
+        </return>
+    </command>
+</administrator> 
+<aserver status="DELIVERY_SUCCESSFUL"/>
+</command>

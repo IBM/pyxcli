@@ -1,0 +1,17 @@
+.coverage
+.tox
+*.pyc
+.project
+.pydevproject
+.settings
+*.wpr
+*.sw?
+*.help
+.pylintrc
+*.log
+__pycache__
+.DS_Store
+nosetests.xml
+*.egg-info
+docs/html
+cover

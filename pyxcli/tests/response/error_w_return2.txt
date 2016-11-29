@@ -1,0 +1,17 @@
+<command id="0">
+<administrator>
+    <command>
+        <code value="TRNS_ERROR_WITH_EXTENDED_INFO"/>
+        <status value="0"/>
+        <status_str value="An error occurred, additional information is provided"/>
+        <return>
+            <vol_num value="0"/>
+            <error_info>
+                <error_code value="TRNS_MGMT_STATUS_VOLUME_ZERO_SIZE"/>
+                <vol_name value="new5"/>
+            </error_info>
+        </return>
+    </command>
+</administrator>
+<aserver status="DELIVERY_SUCCESSFUL"/>
+</command>

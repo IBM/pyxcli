@@ -1,0 +1,10 @@
+<command id="0">
+<administrator>
+    <command>
+        <code value="POOL_DOES_NOT_EXIST"/>
+        <status value="3"/>
+        <status_str value="Storage Pool does not exist"/>
+    </command>
+</administrator>
+<aserver status="DELIVERY_SUCCESSFUL"/>
+</command>

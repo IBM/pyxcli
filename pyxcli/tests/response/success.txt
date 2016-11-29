@@ -1,0 +1,41 @@
+<command id="0">
+<administrator>
+    <command>
+        <changes_session_id value="1374399169082745:1:1372011947477548:1"/>
+        <code value="SUCCESS"/>
+        <last_change_index value="965"/>
+        <status value="0"/>
+        <status_str value="Command completed successfully"/>
+        <return>
+            <pool id="51114a00006">
+                <creator value="fake_value"/>
+                <creator_category value="fake_cat_value"/>
+                <id value="51114a00006"/>
+                <name value="test"/>
+                <soft_size value="309"/>
+                <soft_size_MiB value="295398"/>
+                <hard_size value="309"/>
+                <hard_size_MiB value="295398"/>
+                <snapshot_size value="0"/>
+                <snapshot_size_MiB value="0"/>
+                <used_by_volumes value="0"/>
+                <used_by_volumes_MiB value="0"/>
+                <used_by_snapshots value="0"/>
+                <used_by_snapshots_MiB value="0"/>
+                <total_volume_size value="412"/>
+                <total_volume_size_MiB value="393864"/>
+                <empty_space_soft value="2694535660"/>
+                <empty_space_soft_MiB value="18446744073709453150"/>
+                <empty_space_hard value="309"/>
+                <empty_space_hard_MiB value="295398"/>
+                <locked value="no"/>
+                <lock_behavior value="read_only"/>
+                <create_last_consistent_snapshot value="yes"/>
+                <protected_snapshot_priority value="0"/>
+                <managed value="no"/>
+            </pool>
+        </return>
+    </command>
+</administrator>
+<aserver status="DELIVERY_SUCCESSFUL"/>
+</command>
