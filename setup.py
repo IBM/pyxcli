@@ -36,9 +36,9 @@ setup(
     provides=['pyxcli'],
     url="https://github.com/IBM/pyxcli",
     classifiers=[
-        'Development Status :: Production',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
-        'Intended Audience :: Storage Administrators',
+        'Intended Audience :: System Administrators',
         'Environment :: Console',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
