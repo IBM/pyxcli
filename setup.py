@@ -34,7 +34,7 @@ setup(
     license="Apache License, Version 2.0",
     packages=find_packages(),
     provides=['pyxcli'],
-    url="",
+    url="https://github.com/IBM/pyxcli",
     classifiers=[
         'Development Status :: Production',
         'Intended Audience :: Developers',
