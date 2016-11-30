@@ -2,7 +2,7 @@
 Usage examples of the XCLIClient.
 """
 
-from pyxcli import XCLIClient
+from pyxcli.client import XCLIClient
 
 # Connect SSL to an XIV-Storage.
 xcli_client = XCLIClient.connect_ssl('username', 'password', "mgmt_ip")
