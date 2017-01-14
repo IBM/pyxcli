@@ -21,6 +21,8 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
+install_requires = ['bunch']
+
 setup(
     name='pyxcli',
     version=pyxcli.version,
@@ -29,7 +31,8 @@ setup(
     author_email="tzure@il.ibm.com",
     maintainer="Tzur Eliyahu, Alon Marx",
     keywords=["IBM", "XIV", "Spectrum Accelerate", "A9000", "A9000R"],
-    requires=['bunch'],
+    requires=install_requires,
+    install_requires=install_requires,
     tests_require=['nose', 'mock'],
     license="Apache License, Version 2.0",
     packages=find_packages(),
