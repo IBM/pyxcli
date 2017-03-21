@@ -658,6 +658,7 @@ class PerfClassAssociatedWithVolumesError(CommandFailedRuntimeError):
                                 "USER_NAME_DOES_NOT_EXIST",
                                 "DEFAULT_USER_IS_NOT_DEFINED",
                                 "INCORRECT_PASSWORD",
+                                "USER_OR_PASSWORD_WRONG_OR_MISSING",
                                 "LOGIN_FAILURE_USER_NOT_FOUND_IN_LDAP_SERVERS",
                                 "LOGIN_FAILURE_USER_NOT_AUTHENTICATED_BY_ \
                                 LDAP_SERVER")
