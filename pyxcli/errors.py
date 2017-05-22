@@ -648,6 +648,41 @@ class PerfClassAssociatedWithVolumesError(CommandFailedRuntimeError):
     pass
 
 
+@CommandExecutionError.register("CONS_GROUP_IS_SLAVE")
+class ConsGroupIsSlave(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("MAX_VOLUMES_IN_CONS_GROUP_REACHED")
+class MaxVolumesInConsGroupReached(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("MAX_VOLUMES_IN_REMOTE_CONS_GROUP_REACHED")
+class MaxVolumesInRemoteConsGroupReached(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("REMOTE_VOLUME_BAD_POOL")
+class RemoteVolumeBadPool(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("REMOTE_VOLUME_BELONGS_TO_CONS_GROUP")
+class RemoteVolumeBelongsToConsGroup(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("VOLUME_BAD_POOL")
+class VolumeBadPool(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("VOLUME_NOT_IN_CONS_GROUP")
+class VolumeNotInConsGroup(CommandFailedRuntimeError):
+    pass
+
+
 ##############################################################################
 # CredentialsError
 # we explicitly want to differentiate CredentialsError from
