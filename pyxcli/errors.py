@@ -131,6 +131,9 @@ class CommandFailedInternalError(CommandExecutionError):
 class MCLTimeoutError(CommandFailedRuntimeError):
     pass
 
+@CommandExecutionError.register("VOLUME_IS_MASTER")
+class VolumeMasterError(CommandFailedRuntimeError):
+    pass
 
 @CommandExecutionError.register("PARTIAL_SUCCESS")
 class PartialSuccessError(CommandFailedRuntimeError):
