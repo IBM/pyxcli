@@ -686,6 +686,19 @@ class VolumeNotInConsGroup(CommandFailedRuntimeError):
     pass
 
 
+@CommandExecutionError.register("REMOTE_MAX_VOLUMES_REACHED")
+class RemoteMaxVolumesReached(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("REMOTE_VOLUME_EXISTS")
+class RemoteVolumeExists(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("VOLUME_IS_SLAVE")
+class VolumeIsSlave(CommandFailedRuntimeError):
+    pass
 ##############################################################################
 # CredentialsError
 # we explicitly want to differentiate CredentialsError from
