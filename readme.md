@@ -1,40 +1,52 @@
-# IBM XCLI python client
+# IBM XCLI Python client
 
-This repository contains a Python client for executing XIV CLI commands.
-This protocol is relevant for IBM XIV, Spectrum Accelerate, FlashSystem A9000
-and FlashSystem A9000R storages.
-The client enables full management and monitoring of the storage arrays.
+This repository contains the IBM Extended Command-line Interface (XCLI) Python client, which establishes terminal connection with IBM XIV, Spectrum Accelerate, FlashSystem A9000, and FlashSystem A9000R storage systems. The Python client protocol enables full management and monitoring of these storage arrays by issuing dedicated command-line interface (CLI) commands.
 
-## Getting Started
+## Getting started
 
-Clone the repository, add it to your PYTHONPATH. The XCLI client is ready for import and use.
+Clone the repository, and then add it to your PYTHONPATH directory. The Python client is then ready for import and use.
 
 ## Usage examples
 
-Usage examples of the client are available in examples.py
+Usage examples of the Python client are available in the **examples.py** file.
 
-## XCLI command example
+## Displaying the command-line reference information
 
-Each storage system maintains its own CLI command set. The commands are detailed in the XCLI Reference Guides available on IBM Knowledge Center (KC).
+Each storage system and major software version has its own set of CLI commands. The commands are detailed in the CLI reference guides that are available on IBM Knowledge Center (KC).
 
-To display an XCLI Reference Guide:
+To display the full CLI Reference Guide of a specific storage system and a specific software version:
 
 1. Navigate to a storage system welcome page on KC:
 
-IBM FlashSystem A9000: http://www.ibm.com/support/knowledgecenter/STJKMM/landing/IBM_FlashSystem_A9000_welcome_page.html
+IBM FlashSystem A9000: http://www.ibm.com/support/knowledgecenter/STJKMM
 
-IBM FlashSystem A9000R: http://www.ibm.com/support/knowledgecenter/STJKN5/landing/IBM_FlashSystem_A9000R_welcome_page.html
+IBM FlashSystem A9000R: http://www.ibm.com/support/knowledgecenter/STJKN5
 
-IBM XIV-Gen3: http://www.ibm.com/support/knowledgecenter/STJTAG/com.ibm.help.xivgen3.doc/xiv_gen3kcwelcomepage.html
+IBM XIV-Gen3: http://www.ibm.com/support/knowledgecenter/STJTAG
 
-IBM Spectrum Accelerate: http://www.ibm.com/support/knowledgecenter/STZSWD/landing/IBM_Spectrum_Accelerate_welcome_page.html
+IBM Spectrum Accelerate: http://www.ibm.com/support/knowledgecenter/STZSWD
 
-2. On a welcome page, use the drop-down list to select a storage system microcode version. For example, for FlashSystem A9000 you can currently choose "IBM FlashSystem A9000 12.0.x". The welcome page for the specific microcode version is displayed.
+2. On the welcome page, use the drop-down list to select a storage system software version. For example, select **Version 12.1.x**.
 
-3. On the microcode version welcome page, click "PDF publications" to display the Publications and related information page.
+![Software version](https://github.com/IBM/pyxcli/blob/master/imgs/1.jpg)
 
-4. On the Publications and related information page, click "Download" in the CLI Reference Guide row to display the relevant reference guide in the PDF format.
+The welcome page of the selected software version is displayed.
 
+3. On the left side of the page, click the **Table of contents** toggle button.
+
+![Table of contents](https://github.com/IBM/pyxcli/blob/master/imgs/2.jpg)
+
+The table of contents for the selected software version is displayed.
+
+4. On the table of contents, click **Reference > Command-line reference**.
+
+![CLI reference](https://github.com/IBM/pyxcli/blob/master/imgs/3.jpg)
+
+5. Refer to **Host and cluster management commands** and to all subsequent chapters.
+
+**Note**:
+* The first chapter, **Overview of the command-line interface (CLI)** focuses on how to install and use the Windows-based client utility for issuing CLI commands.  You can skip this chapter if you do not intend to install and use the Windows-based client utility.
+* For the PDF version of the CLI Reference Guide, click **Publications** on the table of contents.
 
 ## Contributing
 We do not accept any contributions at the moment.
