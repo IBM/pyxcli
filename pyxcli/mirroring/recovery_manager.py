@@ -282,7 +282,7 @@ class RecoveryManager(object):
             slave_resource_name would be the slave_vol or slave_cg name'''
 
         kwargs = {
-            resource_type: slave_resource_name,
+            resource_type: resource_name,
             'target': target_name,
             'type': mirror_type,
             'slave_' + resource_type: slave_resource_name,
