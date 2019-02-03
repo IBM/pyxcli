@@ -22,7 +22,7 @@ IBM XCLI Client Module
 XCLI_DEFAULT_LOGGER = "xcli"
 XCLI_DEFAULT_PORT = 7778
 
-version_tuple = (1, 1, 5)
+version_tuple = (1, 1, 7)
 
 
 def get_version_string():
