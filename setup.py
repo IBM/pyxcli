@@ -27,6 +27,7 @@ setup(
     name='pyxcli',
     version=pyxcli.version,
     description="IBM Python XCLI Client",
+    long_description="IBM Python XCLI Client for Spectrum Accelerate Storage Family.",
     author="Tzur Eliyahu, Alon Marx",
     author_email="tzure@il.ibm.com",
     maintainer="Tzur Eliyahu, Alon Marx",

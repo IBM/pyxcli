@@ -71,6 +71,8 @@
    .. autoclass:: pyxcli.errors.MetadataServiceDBAlreadyExistsError
    .. autoclass:: pyxcli.errors.MetadataServiceKeyDoesNotExistError
    .. autoclass:: pyxcli.errors.MetadataServiceKeyAlreadyExistsError
+   .. autoclass:: pyxcli.errors.KeyExistsError
+   .. autoclass:: pyxcli.errors.KeyDoesNotExistError
    .. autoclass:: pyxcli.errors.MetadataServiceMaxEntriesReachedError
    .. autoclass:: pyxcli.errors.MetadataServiceInvalidTokenError
    .. autoclass:: pyxcli.errors.LDAPAuthenticationIsNotActive

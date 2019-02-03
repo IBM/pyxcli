@@ -440,8 +440,18 @@ class MetadataServiceKeyDoesNotExistError(CommandFailedRuntimeError):
     pass
 
 
+@CommandExecutionError.register("KEY_DOES_NOT_EXIST")
+class KeyDoesNotExistError(CommandFailedRuntimeError):
+    pass
+
+
 @CommandExecutionError.register("STATUS_METADATA_SERVICE_KEY_ALREADY_EXISTS")
 class MetadataServiceKeyAlreadyExistsError(CommandFailedRuntimeError):
+    pass
+
+
+@CommandExecutionError.register("KEY_EXISTS")
+class KeyExistsError(CommandFailedRuntimeError):
     pass
 
 
