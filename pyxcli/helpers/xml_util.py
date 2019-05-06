@@ -19,9 +19,14 @@ import xml.etree.cElementTree as cet
 from contextlib import contextmanager
 from xml.parsers.expat import ExpatError
 
+try:
+    basestring
+except NameError:
+    basestring = str
+
+
 Element = cet.Element
 tostring = cet.tostring
-
 
 class XMLException(Exception):
     pass
@@ -189,7 +194,7 @@ class TerminationDetectingXMLParser(object):
 
     def __init__(self):
         self.tree_builder = _TerminationDetectingTreeBuilder()
-        self.xml_tree_builder = et.XMLTreeBuilder(target=self.tree_builder)
+        self.xml_tree_builder = et.XMLParser(target=self.tree_builder)
 
     def feed(self, chunk):
         with _translateExceptions(chunk):

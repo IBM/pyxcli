@@ -40,6 +40,11 @@ from pyxcli.transports import MultiEndpointTransport
 from pyxcli.response import XCLIResponse
 from pyxcli.helpers.exceptool import chained
 
+try:
+    basestring
+except NameError:
+    basestring = str
+
 xlog = getLogger(XCLI_DEFAULT_LOGGER)
 
 
@@ -261,7 +266,7 @@ class XCLIClient(BaseXCLIClient):
         return str(obj)
 
     def _build_command(self, cmd, params, options, remote_target=None):
-        root = etree.Element("command", id=str(self._cmdindex.next()),
+        root = etree.Element("command", id=str(next(self._cmdindex)),
                              type=cmd, close_on_return="no")
         if remote_target:
             root.attrib["remote_target"] = remote_target
@@ -273,8 +278,14 @@ class XCLIClient(BaseXCLIClient):
             root.append(etree.Element("argument", name=self._dump_xcli(k),
                                       value=self._dump_xcli(v)))
         data = etree.tostring(root)
-        anon = data.replace(options["password"],
-                            "XXX") if "password" in options else data
+
+        if("password" in options):
+            data = data.decode()
+            data.replace(options["password"], "XXX")
+            data.encode()
+
+        anon = data
+
         xlog.debug("SEND %s" % (anon))
         return data
 
