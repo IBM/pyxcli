@@ -131,9 +131,11 @@ class CommandFailedInternalError(CommandExecutionError):
 class MCLTimeoutError(CommandFailedRuntimeError):
     pass
 
+
 @CommandExecutionError.register("VOLUME_IS_MASTER")
 class VolumeMasterError(CommandFailedRuntimeError):
     pass
+
 
 @CommandExecutionError.register("PARTIAL_SUCCESS")
 class PartialSuccessError(CommandFailedRuntimeError):
@@ -709,6 +711,14 @@ class RemoteVolumeExists(CommandFailedRuntimeError):
 @CommandExecutionError.register("VOLUME_IS_SLAVE")
 class VolumeIsSlave(CommandFailedRuntimeError):
     pass
+
+
+@CommandExecutionError.register(
+    "TRNS_MGMT_STATUS_OBJECTS_IN_DIFFERENT_DOMAINS")
+class StorageObjectIsNotInDomain(CommandFailedRuntimeError):
+    pass
+
+
 ##############################################################################
 # CredentialsError
 # we explicitly want to differentiate CredentialsError from

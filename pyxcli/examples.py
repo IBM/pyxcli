@@ -11,12 +11,12 @@ xcli_client = XCLIClient.connect_ssl('username', 'password', "mgmt_ip")
 # as list - getting all the volumes as a list element
 volumes = xcli_client.cmd.vol_list().as_list
 for vol in volumes:
-    print (vol.name)
+    print(vol.name)
 
 # Getting all of the pools
 pools = xcli_client.cmd.pool_list().as_list
 for pool in pools:
-    print (pool.name)
+    print(pool.name)
 
 # Create volume - return value is an XML object indicating if the
 # command succeeded.
