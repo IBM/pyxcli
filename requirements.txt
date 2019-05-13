@@ -1,1 +1,1 @@
-munch
+munch==2.3.2
