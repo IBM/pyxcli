@@ -15,7 +15,7 @@
 ##############################################################################
 
 from logging import getLogger
-from bunch import Bunch
+from munch import Munch
 from pyxcli import XCLI_DEFAULT_LOGGER
 
 CG = "cg"
@@ -60,7 +60,7 @@ class MirroredEntities(object):
             for xcli_mirror in self.xcli_client.cmd.mirror_list(scope='CG'):
                 name = MirroredEntities.get_mirrored_object_name(xcli_mirror)
                 cgs_mirrors_by_name[name] = xcli_mirror
-        res = Bunch(volumes=volumes_mirrors_by_name, cgs=cgs_mirrors_by_name)
+        res = Munch(volumes=volumes_mirrors_by_name, cgs=cgs_mirrors_by_name)
         return res
 
     def get_cg_mirrors(self):

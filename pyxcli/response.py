@@ -23,8 +23,20 @@
 
 """
 
-from bunch import Bunch
+from munch import Munch
 from pyxcli.helpers import xml_util as etree
+import base64
+import codecs
+
+try:
+    basestring
+except NameError:
+    basestring = str
+
+try:
+    long
+except NameError:
+    long = int
 
 
 class XCLIResponse(object):
@@ -38,7 +50,8 @@ class XCLIResponse(object):
         compressed = cmdroot.find("compressed_return")
         if compressed is not None:
             text = compressed.attrib["value"]
-            raw = text.decode(encoding).decode("zlib")
+            raw = base64.b64decode(text)
+            raw = (codecs.decode(raw, "zlib")).decode('ascii')
             cmdroot.append(etree.fromstring("<return>%s</return>" % (raw,)))
             cmdroot.remove(compressed)
 
@@ -128,7 +141,7 @@ def _populate_bunch_with_element(element):
     """
     if 'value' in element.attrib:
         return element.get('value')
-    current_bunch = Bunch()
+    current_bunch = Munch()
 
     if element.get('id'):
         current_bunch['nextra_element_id'] = element.get('id')

@@ -34,6 +34,11 @@ from pyxcli.errors import ConnectionError
 from pyxcli.errors import CorruptResponse
 from pyxcli.errors import BaseScsiException
 
+try:
+    basestring
+except NameError:
+    basestring = str
+
 xlog = getLogger(XCLI_DEFAULT_LOGGER)
 
 
@@ -223,7 +228,8 @@ class SocketTransport(object):
 
         while data:
             chunk = data[:self.MAX_IO_CHUNK]
-            sent = self.sock.send(chunk)
+            byte_chunk = chunk.encode()
+            sent = self.sock.send(byte_chunk)
             data = data[sent:]
 
         parser = TerminationDetectingXMLParser()
@@ -233,7 +239,7 @@ class SocketTransport(object):
                 chunk = self.sock.recv(self.MAX_IO_CHUNK)
                 if not chunk:
                     break
-                raw += chunk
+                raw += chunk.decode()
                 parser.feed(chunk)
             return parser.close()
         except XMLException as ex:

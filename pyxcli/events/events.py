@@ -24,7 +24,7 @@
 
 import json
 from socket import getfqdn
-from bunch import Bunch
+from much import Munch
 from logging import getLogger
 from pyxcli import XCLI_DEFAULT_LOGGER
 from pyxcli.events.platform_info import get_platform_details
@@ -86,7 +86,7 @@ class EventsManager(object):
             raise TypeError('properties is not dict')
 
         # prepare event
-        event_bunch = Bunch(
+        event_bunch = Munch(
             Product=self.product_name,
             Version=self.product_version,
             Server=self.server_name,
