@@ -24,7 +24,7 @@
 
 import json
 from socket import getfqdn
-from much import Munch
+from munch import Munch
 from logging import getLogger
 from pyxcli import XCLI_DEFAULT_LOGGER
 from pyxcli.events.platform_info import get_platform_details
